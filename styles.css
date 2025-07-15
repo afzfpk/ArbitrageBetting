@@ -1,0 +1,124 @@
+/* Estilo clean e profissional para a aplicação */
+
+/* Cabeçalho principal */
+h1 {
+    color: #3366ff !important;
+    font-weight: 700 !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Sub-cabeçalhos */
+h2, h3 {
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+}
+
+/* Botões */
+.stButton > button {
+    border-radius: 6px !important;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: 600 !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Caixas de entrada numéricas */
+input[type="number"] {
+    border-radius: 6px !important;
+    border: 2px solid rgba(51, 102, 255, 0.3) !important;
+    padding: 8px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+input[type="number"]:focus {
+    border-color: #3366ff !important;
+    box-shadow: 0 0 0 2px rgba(51, 102, 255, 0.2) !important;
+}
+
+/* Métricas */
+[data-testid="stMetricValue"] {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: #3366ff !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-weight: 600 !important;
+}
+
+/* Cards */
+.card {
+    border-radius: 8px !important;
+    padding: 1.2rem !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+.card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Alertas de sucesso e erro */
+.stAlert {
+    border-radius: 6px !important;
+    border: none !important;
+    padding: 0.8rem !important;
+}
+
+[data-baseweb="notification"] {
+    border-radius: 6px !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Separador */
+hr {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* Tabelas e DataFrames */
+[data-testid="stDataFrame"] {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-testid="stDataFrame"] th {
+    background-color: rgba(51, 102, 255, 0.2) !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* Animação de destaque para o resultado */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(51, 102, 255, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(51, 102, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(51, 102, 255, 0); }
+}
+
+.highlight-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Layout responsivo */
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    [data-testid="stMetricValue"] {
+        font-size: 1.3rem !important;
+    }
+}

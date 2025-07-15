@@ -1,0 +1,688 @@
+/* Layout Universal Profissional - Preto/Vermelho/Branco */
+/* Designed with AI[R] config and dev with love to tipsters and bettors by A F Z F - 2025 */
+
+:root {
+    --primary-black: #0a0a0a;
+    --secondary-black: #1a1a1a;
+    --accent-red: #e53e3e;
+    --bright-red: #ff4444;
+    --pure-white: #ffffff;
+    --off-white: #f7f7f7;
+    --dark-gray: #2d2d2d;
+    --light-gray: #666666;
+    --success-green: #48bb78;
+    --warning-orange: #ed8936;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --red-shadow: rgba(229, 62, 62, 0.3);
+}
+
+/* Reset e configurações globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background principal */
+.stApp {
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-black) 50%, var(--primary-black) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    color: var(--pure-white);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Esconder sidebar em dispositivos pequenos */
+@media (max-width: 1024px) {
+    .css-1d391kg {
+        display: none !important;
+    }
+    
+    .main .block-container {
+        padding: 1rem !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Header profissional */
+.professional-header {
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-black) 100%);
+    border-bottom: 2px solid var(--accent-red);
+    padding: 1.5rem 2rem;
+    margin: -1rem -2rem 2rem -2rem;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.professional-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(229, 62, 62, 0.1), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--accent-red), var(--bright-red));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--pure-white);
+    box-shadow: 0 4px 16px var(--red-shadow);
+}
+
+.title-section h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--pure-white);
+    margin-bottom: 0.3rem;
+}
+
+.title-section p {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    margin: 0;
+}
+
+.status-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-indicator {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-live {
+    background: linear-gradient(135deg, var(--success-green), #38a169);
+    color: var(--pure-white);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Navegação universal */
+.universal-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+    padding: 1rem;
+    background: var(--secondary-black);
+    border: 2px solid var(--dark-gray);
+    border-radius: 12px;
+    color: var(--pure-white);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-button:hover::before {
+    left: 100%;
+}
+
+.nav-button:hover {
+    border-color: var(--accent-red);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--red-shadow);
+}
+
+.nav-button.active {
+    background: linear-gradient(135deg, var(--accent-red), var(--bright-red));
+    border-color: var(--bright-red);
+    box-shadow: 0 4px 16px var(--red-shadow);
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Cards profissionais */
+.professional-card {
+    background: var(--secondary-black);
+    border: 1px solid var(--dark-gray);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.professional-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-red), var(--bright-red), var(--accent-red));
+}
+
+.professional-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--shadow-color);
+    border-color: var(--accent-red);
+}
+
+/* Inputs profissionais */
+.stNumberInput input,
+.stTextInput input,
+.stSelectbox select {
+    font-size: 16px !important;
+    padding: 1rem !important;
+    border: 2px solid var(--dark-gray) !important;
+    border-radius: 12px !important;
+    background: var(--secondary-black) !important;
+    color: var(--pure-white) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stNumberInput input:focus,
+.stTextInput input:focus,
+.stSelectbox select:focus {
+    border-color: var(--accent-red) !important;
+    box-shadow: 0 0 0 3px var(--red-shadow) !important;
+    outline: none !important;
+}
+
+/* Botões profissionais */
+.stButton button {
+    width: 100% !important;
+    padding: 1rem 2rem !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border: none !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, var(--accent-red), var(--bright-red)) !important;
+    color: var(--pure-white) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.stButton button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.stButton button:hover::before {
+    left: 100%;
+}
+
+.stButton button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px var(--red-shadow) !important;
+}
+
+.stButton button:active {
+    transform: translateY(0) !important;
+}
+
+/* Botões secundários */
+.secondary-button {
+    background: var(--secondary-black) !important;
+    border: 2px solid var(--accent-red) !important;
+    color: var(--pure-white) !important;
+}
+
+.secondary-button:hover {
+    background: var(--accent-red) !important;
+    border-color: var(--bright-red) !important;
+}
+
+/* Resultados */
+.result-success {
+    background: linear-gradient(135deg, var(--success-green), #38a169);
+    color: var(--pure-white);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(72, 187, 120, 0.3);
+    border: 2px solid #68d391;
+}
+
+.result-error {
+    background: linear-gradient(135deg, var(--accent-red), var(--bright-red));
+    color: var(--pure-white);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 8px 32px var(--red-shadow);
+    border: 2px solid var(--bright-red);
+}
+
+.profit-display {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--pure-white), var(--off-white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.percentage-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--pure-white);
+    color: var(--success-green);
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabelas profissionais */
+.professional-table {
+    background: var(--secondary-black);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 2rem 0;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    border: 1px solid var(--dark-gray);
+}
+
+.professional-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.professional-table th {
+    background: linear-gradient(135deg, var(--accent-red), var(--bright-red));
+    color: var(--pure-white);
+    padding: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.professional-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--dark-gray);
+    color: var(--pure-white);
+    font-size: 16px;
+}
+
+.professional-table tr:hover {
+    background: rgba(229, 62, 62, 0.1);
+}
+
+/* Tabs profissionais */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1rem;
+    border-bottom: 2px solid var(--dark-gray);
+    padding-bottom: 1rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: var(--secondary-black) !important;
+    color: var(--pure-white) !important;
+    border: 2px solid var(--dark-gray) !important;
+    border-radius: 12px !important;
+    padding: 1rem 2rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, var(--accent-red), var(--bright-red)) !important;
+    border-color: var(--bright-red) !important;
+    color: var(--pure-white) !important;
+    box-shadow: 0 4px 16px var(--red-shadow) !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    border-color: var(--accent-red) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Alertas profissionais */
+.stAlert {
+    border-radius: 12px !important;
+    border: none !important;
+    padding: 1rem 1.5rem !important;
+    margin: 1rem 0 !important;
+}
+
+.stAlert[data-baseweb="notification"] {
+    background: var(--secondary-black) !important;
+    color: var(--pure-white) !important;
+    border-left: 4px solid var(--accent-red) !important;
+}
+
+/* Métricas */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.metric-card {
+    background: var(--secondary-black);
+    border: 1px solid var(--dark-gray);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-red), var(--bright-red));
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--shadow-color);
+    border-color: var(--accent-red);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-red);
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Footer profissional */
+.professional-footer {
+    background: var(--primary-black);
+    border-top: 2px solid var(--accent-red);
+    padding: 2rem;
+    margin: 3rem -2rem -2rem -2rem;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-signature {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.footer-signature .highlight {
+    color: var(--accent-red);
+    font-weight: 600;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent-red);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .universal-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .nav-button {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .professional-card {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .profit-display {
+        font-size: 2.5rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .professional-header {
+        padding: 1rem;
+        margin: -1rem -1rem 1rem -1rem;
+    }
+    
+    .professional-card {
+        padding: 1rem;
+    }
+    
+    .profit-display {
+        font-size: 2rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet específico */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .universal-nav {
+        justify-content: space-between;
+    }
+    
+    .nav-button {
+        flex: 1;
+        max-width: 180px;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1400px) {
+    .header-content,
+    .footer-content {
+        max-width: 1400px;
+    }
+    
+    .professional-card {
+        padding: 2.5rem;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Animações de loading */
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--dark-gray);
+    border-radius: 50%;
+    border-top-color: var(--accent-red);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-red);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bright-red);
+}
+
+/* Seleção de texto */
+::selection {
+    background: var(--accent-red);
+    color: var(--pure-white);
+}
+
+/* Foco acessível */
+*:focus {
+    outline: 2px solid var(--accent-red);
+    outline-offset: 2px;
+}
+
+/* Transições suaves para todas as interações */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Estilo para dispositivos com toque */
+@media (hover: none) {
+    .nav-button:hover,
+    .professional-card:hover,
+    .metric-card:hover {
+        transform: none;
+    }
+    
+    .nav-button:active,
+    .professional-card:active,
+    .metric-card:active {
+        transform: scale(0.98);
+    }
+}

@@ -1,0 +1,339 @@
+/* Layout Mobile Profissional */
+@media (max-width: 768px) {
+    /* Remover sidebar no mobile */
+    .css-1d391kg {
+        display: none !important;
+    }
+    
+    /* Container principal ocupa toda a largura */
+    .main .block-container {
+        padding: 1rem !important;
+        max-width: 100% !important;
+    }
+    
+    /* Header mobile elegante */
+    .mobile-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        margin: -1rem -1rem 1rem -1rem;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Navegação mobile com tabs */
+    .mobile-nav {
+        display: flex;
+        justify-content: space-around;
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 10px;
+        z-index: 100;
+    }
+    
+    .nav-item {
+        flex: 1;
+        text-align: center;
+        padding: 0.8rem 0.5rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .nav-item.active {
+        background: linear-gradient(135deg, #3366ff 0%, #667eea 100%);
+        color: white;
+        transform: scale(1.05);
+    }
+    
+    /* Cards mobile optimizados */
+    .mobile-card {
+        background: rgba(255,255,255,0.95);
+        border-radius: 20px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    /* Inputs mobile friendly */
+    .stNumberInput input {
+        font-size: 18px !important;
+        padding: 1rem !important;
+        border-radius: 12px !important;
+        border: 2px solid rgba(51, 102, 255, 0.3) !important;
+        background: rgba(255,255,255,0.9) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .stNumberInput input:focus {
+        border-color: #3366ff !important;
+        box-shadow: 0 4px 20px rgba(51, 102, 255, 0.3) !important;
+        transform: scale(1.02) !important;
+    }
+    
+    /* Botões mobile elegantes */
+    .stButton button {
+        width: 100% !important;
+        padding: 1rem !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        border-radius: 15px !important;
+        border: none !important;
+        background: linear-gradient(135deg, #3366ff 0%, #667eea 100%) !important;
+        color: white !important;
+        box-shadow: 0 8px 24px rgba(51, 102, 255, 0.3) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .stButton button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 12px 32px rgba(51, 102, 255, 0.4) !important;
+    }
+    
+    .stButton button:active {
+        transform: translateY(0) !important;
+    }
+    
+    /* Selectbox mobile */
+    .stSelectbox select {
+        font-size: 16px !important;
+        padding: 1rem !important;
+        border-radius: 12px !important;
+        border: 2px solid rgba(51, 102, 255, 0.3) !important;
+        background: rgba(255,255,255,0.9) !important;
+    }
+    
+    /* Resultados mobile */
+    .result-card {
+        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        color: white;
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin: 1rem 0;
+        box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3);
+        text-align: center;
+    }
+    
+    .result-value {
+        font-size: 2rem;
+        font-weight: 800;
+        margin: 0.5rem 0;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    /* Tabela mobile responsiva */
+    .mobile-table {
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        margin: 1rem 0;
+    }
+    
+    .mobile-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .mobile-table th {
+        background: linear-gradient(135deg, #3366ff 0%, #667eea 100%);
+        color: white;
+        padding: 1rem;
+        font-weight: 700;
+        text-align: left;
+    }
+    
+    .mobile-table td {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        font-size: 16px;
+    }
+    
+    /* Botões de ação mobile */
+    .action-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+    
+    .action-btn {
+        padding: 0.8rem;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, #3366ff 0%, #667eea 100%);
+        color: white;
+    }
+    
+    .btn-success {
+        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        color: white;
+    }
+    
+    .btn-warning {
+        background: linear-gradient(135deg, #FF5722 0%, #f44336 100%);
+        color: white;
+    }
+    
+    /* Animações suaves */
+    .mobile-card, .mobile-table, .result-card {
+        animation: slideUp 0.5s ease;
+    }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Feedback visual */
+    .success-feedback {
+        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        color: white;
+        padding: 1rem;
+        border-radius: 12px;
+        margin: 1rem 0;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+    }
+    
+    .warning-feedback {
+        background: linear-gradient(135deg, #FF9800 0%, #f57c00 100%);
+        color: white;
+        padding: 1rem;
+        border-radius: 12px;
+        margin: 1rem 0;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 4px 16px rgba(255, 152, 0, 0.3);
+    }
+    
+    .error-feedback {
+        background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+        color: white;
+        padding: 1rem;
+        border-radius: 12px;
+        margin: 1rem 0;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 4px 16px rgba(244, 67, 54, 0.3);
+    }
+    
+    /* Histórico mobile */
+    .history-item {
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-left: 4px solid #3366ff;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    
+    .history-profit {
+        color: #4CAF50;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    
+    .history-date {
+        color: #666;
+        font-size: 0.9rem;
+    }
+    
+    /* Loading state */
+    .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(51, 102, 255, 0.3);
+        border-top: 4px solid #3366ff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    /* Sticky bottom bar */
+    .bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        border-radius: 20px 20px 0 0;
+        z-index: 100;
+    }
+    
+    /* Esconder elementos desktop no mobile */
+    .desktop-only {
+        display: none !important;
+    }
+    
+    /* Espaçamento para bottom bar */
+    .main-content {
+        margin-bottom: 100px;
+    }
+}
+
+/* Dark mode mobile */
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+    .mobile-card, .mobile-table {
+        background: rgba(30, 30, 30, 0.95) !important;
+        color: white !important;
+    }
+    
+    .mobile-nav {
+        background: rgba(30, 30, 30, 0.95) !important;
+        color: white !important;
+    }
+    
+    .nav-item {
+        color: white !important;
+    }
+    
+    .stNumberInput input, .stSelectbox select {
+        background: rgba(50, 50, 50, 0.9) !important;
+        color: white !important;
+        border-color: rgba(51, 102, 255, 0.5) !important;
+    }
+}
